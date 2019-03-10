@@ -1,0 +1,14 @@
+MavenProRegular
+LatoRegular
+LatoBold
+LatoBlack
+
+
+Ўрифты
+картинки
+треугольник
+
+
+18px
+
+color: #bebebe;

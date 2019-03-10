@@ -1,0 +1,583 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@font-face {
+    font-family: 'Lato Black';
+    src: url('../assets/LATO-BLACK.TTF');
+}
+
+@font-face {
+    font-family: 'Lato Bold';
+    src: url('../assets/LATO-BOLD.TTF');
+}
+
+@font-face {
+    font-family: 'Lato Regular';
+    src: url('../assets/LATO-REGULAR.TTF');
+}
+
+@font-face {
+    font-family: 'Maven Pro Black';
+    src: url('../assets/MAVENPRO-BLACK.TTF');
+}
+
+@font-face {
+    font-family: 'Maven Pro Bold';
+    src: url('../assets/MAVENPRO-BOLD.TTF');
+}
+
+@font-face {
+    font-family: 'Maven Pro Medium';
+    src: url('../assets/MAVENPRO-MEDIUM.TTF');
+}
+
+@font-face {
+    font-family: 'Maven Pro Regular';
+    src: url('../assets/MAVENPRO-REGULAR.TTF');
+}
+
+/*reset default settings */
+*{
+    margin:0;
+    padding:0;
+    font-family:'Lato Regular';
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+::-webkit-input-placeholder { color: rgb(224, 224, 224); font-size: 14px; font-family: 'Maven Pro Regular'; }
+:-moz-placeholder { color: rgb(224, 224, 224); font-size: 14px; font-family: 'Maven Pro Regular'; }
+::-moz-placeholder { color: rgb(224, 224, 224); font-size: 14px; font-family: 'Maven Pro Regular'; }
+:-ms-input-placeholder { color: rgb(224, 224, 224); font-size: 14px; font-family: 'Maven Pro Regular'; }
+::placeholder { color: rgb(224, 224, 224); font-size: 14px; font-family: 'Maven Pro Regular';}
+
+body {
+    min-width: 1024px;
+}
+
+.page-header {
+    height: 64px;
+    background: #323232;
+    text-align: center;
+    line-height: 64px;
+    z-index: 1;
+}
+
+.page-header::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 45px solid transparent;
+    border-right: 45px solid transparent;
+    border-top: 26px solid #323232;
+    position: absolute; 
+    left: calc(50% - 45px);
+    top: 64px;
+}
+
+@media(max-width: 1024px) {
+    .page-header::after{
+        left: 467px;
+    }
+}
+
+.page-header ul {
+    display: inline-block;
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.page-header ul li {
+    display: block;
+    float: left;
+    margin: 0 12px;
+    cursor: pointer;
+    font-size: 10px;
+    font-family: 'Lato Bold';
+}
+
+.page-header ul li.has-triangle {
+    width: 58px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+.page-header ul li a.active, .page-header ul li a:hover   {
+    color: #2eb398;
+}
+
+
+.page-header ul li:last-child {
+    margin-right: 0;
+}
+
+.page-header .triangle div:nth-child(1) {
+    width: 0; height: 0; border-left: 29px solid transparent; border-right: 29px solid transparent; border-top: 50px solid #fff; margin-left: 0px; position: absolute; top: 12px; left: 0;
+}
+
+.page-header .triangle div:nth-child(2) {
+    width: 0; height: 0; border-left: 27px solid transparent; border-right: 27px solid transparent;border-top: 48px solid #323232; margin-left: 2px; position: absolute; top: 12px; left: 0;
+}
+
+.page-header .triangle div:nth-child(3) {
+    width: 0; height: 0; border-left: 29px solid transparent; border-right: 29px solid transparent;border-top: 10px solid #fff; margin-left: 0px; position: absolute; top: 12px; left: 0;
+}
+
+.page-header .triangle div:nth-child(4) {
+    width: 0; height: 0; border-left: 27px solid transparent; border-right: 27px solid transparent;border-top: 8px solid #323232; margin-left: 2px; position: absolute; top: 12px; left: 0;
+}
+
+.page-header .triangle:hover div:nth-child(1) {
+    border-top: 50px solid #2eb398;
+}
+
+.page-header .triangle:hover div:nth-child(3) {
+    border-top: 10px solid #2eb398;
+}
+
+/* #2eb398 lato bold*/
+.content {
+    padding: 90px 10px;
+    text-align: center;
+    position: relative;
+}
+
+.content .images {
+    padding: 19px;
+    width: 980px;
+    display: inline-block;
+}
+
+.content .slider-switch {
+    position: absolute;
+    left: 30px;
+    bottom: 24px;
+    display: inline-block;
+}
+
+.content .slider-switch li {
+    float: left;
+    display: block;
+    width: 6px;
+    height: 6px;
+    margin-right: 3px;
+    background: #d7d3c7;
+    cursor: pointer;
+}
+
+.content .slider-switch li.active {
+    background: #898682;
+}
+
+.about-me {
+    background: #2eb398;
+    width: 100%;
+    line-height: 0;
+    padding: 64px 120px;
+    box-sizing: border-box;  
+    font-size: 0; 
+    text-align: center;
+    height: 332px;
+}
+
+.about-me > div {
+    display: inline-block;
+}
+
+.about-me .person-photo {
+    width: 180px;
+    height: 204px;
+    position: relative;
+    float: left;
+}
+
+.about-me .person-photo .hex {
+    width: 180px;
+    height: 104px;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    -webkit-background-size: auto 204px;
+    -moz-background-size: auto 204px;
+    -ms-background-size: auto 204px;
+    -o-background-size: auto 204px;
+    margin: 50px 0px;
+    text-align: center;
+    zoom: 1;
+}
+
+.about-me .person-info {
+    padding-left: 20px;
+    width: 580px;
+    height: 204px;
+    position: relative;
+    float: left;
+}
+
+.about-me h1 {
+    font-size: 30px;
+    line-height: 30px;
+    color: rgb(215,252,245);
+    font-family: "Maven Pro Regular";
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.about-me h2 {
+    font-size: 18px;
+    line-height: 18px;
+    color: rgb(32,129,109);
+    font-family: "Maven Pro Regular";
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.about-me p {
+    font-size: 12px;
+    line-height: 22px;
+    color: rgb(215,252,245);
+    font-family: "Lato Regular";
+    text-align: left;
+}
+
+.social-buttons {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+    
+
+.social-buttons ul {
+    display: inline-block;
+}
+
+.social-buttons li {
+    display: block;
+    float: left;
+    margin: 0;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #2ea091;
+}
+
+.social-buttons li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.social-buttons li:nth-child(3n+1) {
+    background: #9ae0d2;
+}
+
+.social-buttons li:nth-child(3n+2) {
+    background: #69cec0;
+}
+
+.social-buttons li:nth-child(3n+3) {
+    background: #81cec6;
+}
+
+.get-in-touch {
+    background: #323232;
+    padding: 64px 120px;
+    text-align: center
+}
+
+.get-in-touch > div {
+    display: inline-block;
+}
+
+.get-in-touch > div > div {
+    float: left;
+}
+
+.get-in-touch .contact-form {
+    width: 580px;
+}
+
+.get-in-touch .contact-text {
+    padding-left: 20px;
+    width: 180px;
+}
+
+.get-in-touch h1 {
+    font-size: 30px;
+    line-height: 30px;
+    color: rgb(224,224,224);
+    font-family: "Maven Pro Regular";
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.get-in-touch h2 {
+    font-size: 18px;
+    line-height: 18px;
+    color: rgb(190,190,190);
+    font-family: "Maven Pro Regular";
+    text-align: left;
+    margin-bottom: 22px;
+}
+
+.get-in-touch p, .get-in-touch a {
+    font-size: 12px;
+    line-height: 22px;
+    color: rgb(224,224,224);
+    font-family: "Lato Regular";
+    text-align: left;
+    display: block;
+}
+
+.get-in-touch a:hover {
+    cursor: pointer;
+    color: #4c9983; 
+}
+
+.get-in-touch p span {
+    font-family: "Lato Bold";
+    font-weight: bold;
+}
+
+.get-in-touch .info {
+    text-align: justify;
+    margin-bottom: 44px;
+}
+
+.get-in-touch .address i, .get-in-touch .phone i, .get-in-touch .email i {
+    width: 22px;
+    color: #4c9983;
+    display: inline-block;
+}
+ 
+/*Стили полей для ввода*/
+#applicationName, #applicationEmail, #applicationSubject{
+    margin-bottom: 16px;
+    width: calc(100% - 32px);
+    height: 36px;
+    line-height: 36px;
+    background: #454545;
+    padding: 0 16px;
+    font-size: 14px;
+    color: rgb(224, 224, 224);
+    border: none; 
+    border-width: 0; 
+    box-shadow: none;
+}
+
+/*Стили полей для ввода*/
+textarea {
+    width: calc(100% - 32px);
+    height: 136px;
+    background: #454545;
+    line-height: 22px; 
+    padding: 7px 16px;
+    font-size: 14px;
+    color: rgb(224, 224, 224);
+    border: none; 
+    border-width: 0; 
+    box-shadow: none;
+    margin-bottom: 16px;
+}
+
+#applicationName:focus, #applicationEmail:focus, #applicationSubject:focus, #applicationMessage:focus {
+    color: #fff;
+} 
+
+/*Стили для кнопки*/
+.applicationButton {
+    background: #2eb398;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 36px;
+    color: rgb(215,252,245);
+    font-family: "Lato Bold";
+    text-align: left;
+    text-transform: uppercase;
+    width: 90px;
+    height: 36px;
+    text-align: center;
+    border: none; 
+    border-width: 0; 
+    box-shadow: none;
+    float: right;
+}
+
+.applicationButton:hover {
+    background: #4c9983;
+}
+
+.contacts-info{
+    padding-top: 80px;
+    padding-left: 80px;
+    background: #323232;
+    color: #7f7f7f;
+    font-family:'Lato Regular';   
+}
+
+footer {
+    height: 48px;
+    line-height: 48px;
+    background: #222222;
+    color: #454545;
+    font-size: 12px;
+    font-family:'Maven Pro Regular';
+    padding-left: 40px;    
+}
+
+footer span:hover {
+    color: #fff;
+}
+
+/* HEXAGON STARTS HERE */
+.hex {
+	width:calc(20% - 20px);
+	height:102px;
+	background-color: #ccc;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;			
+	-webkit-background-size: auto 173px;							
+	-moz-background-size: auto 173px;							
+	-ms-background-size: auto 173px;							
+	-o-background-size: auto 173px;							
+	position: relative;
+	float:left;
+	margin:32px 10px;
+	text-align:center;
+    zoom:1;
+    z-index: 1;
+}
+		
+	.hex.hex-gap {
+		margin-left: 11%;
+	}
+	
+	.hex a {
+		display:block;
+		width: 100%;
+		height:100%;
+		text-indent:-9999em;
+		position:absolute;
+		top:0;
+		left:0;
+	}
+
+	.hex .corner-1,
+	.hex .corner-2 {
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		background: inherit;								
+		z-index:-2;						
+		overflow:hidden;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		-o-backface-visibility: hidden;			
+		backface-visibility: hidden;			
+	}
+	
+	.hex .corner-1 {
+		z-index:-1;
+		-webkit-transform: rotate(60deg);
+		-moz-transform: rotate(60deg);
+		-ms-transform: rotate(60deg);
+		-o-transform: rotate(60deg);
+		transform: rotate(60deg);
+	}
+	
+	.hex .corner-2 {
+		-webkit-transform: rotate(-60deg);
+		-moz-transform: rotate(-60deg);
+		-ms-transform: rotate(-60deg);
+		-o-transform: rotate(-60deg);
+		transform: rotate(-60deg);
+	}
+	
+	.hex .corner-1:before,
+	.hex .corner-2:before {
+		width: 173px;
+		height:	173px;
+	  content: '';
+	  position: absolute;
+	  background: inherit;
+	  top:0;
+	  left: 0;
+	  z-index: 1;
+	  background: inherit;
+	  background-repeat:no-repeat;
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		-o-backface-visibility: hidden;	
+		backface-visibility: hidden;				  
+	}			
+	
+
+	.hex .corner-1:before {
+		-webkit-transform: rotate(-60deg) translate(-87px, 0px);
+		-moz-transform: rotate(-60deg) translate(-87px, 0px);
+		-ms-transform: rotate(-60deg) translate(-87px, 0px);
+		-o-transform: rotate(-60deg) translate(-87px, 0px);
+		transform: rotate(-60deg) translate(-87px, 0px);	
+	  -webkit-transform-origin: 0 0;
+	  -moz-transform-origin: 0 0;
+	  -ms-transform-origin: 0 0;
+	  -o-transform-origin: 0 0;
+	  transform-origin: 0 0;
+	}			
+	
+	.hex .corner-2:before {
+		-webkit-transform: rotate(60deg) translate(-48px, -11px);
+		-moz-transform: rotate(60deg) translate(-48px, -11px);
+		-ms-transform: rotate(60deg) translate(-48px, -11px);
+		-o-transform: rotate(60deg) translate(-48px, -11px);
+		transform: rotate(60deg) translate(-48px, -11px);	
+		bottom:0;
+	}		
+
+
+	
+	/* Custom styles*/
+	.hex .inner {		
+		color:#eee;
+	}
+	
+	.hex h4 {
+		font-family: 'Josefin Sans', sans-serif;		
+		margin:0;			
+	}
+	
+	.hex hr {
+		border:0;
+		border-top:1px solid #eee;
+		width:60%;
+		margin:15px auto;
+	}
+	
+	.hex p {
+		font-size:16px;
+		font-family: 'Kotta One', serif;
+		width:80%;
+		margin:0 auto;
+	}
+
+	.hex.hex-1 {
+		background: #74cddb;
+	}
+	
+	.hex.hex-2 {
+		background: #f5c53c;
+	}
+	
+	.hex.hex-3 {
+		background: #80b971;
+	}
